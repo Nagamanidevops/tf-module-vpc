@@ -5,5 +5,6 @@ locals{
         business_unit = "ecommerce"
         owner = "ecommerce-robot"
     }
-}
+}    
+    
 
