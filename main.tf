@@ -16,5 +16,5 @@ resource "aws_subnet" "main" {
    { Name = "${var.env}-subnet" }
   )
   }
-}
+
 
