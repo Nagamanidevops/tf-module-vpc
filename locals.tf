@@ -1,5 +1,5 @@
 locals{
-    common_tages = {
+    common_tags = {
         env = var.env
         project = "roboshop"
         business_unit = "ecommerce"
