@@ -22,6 +22,8 @@ resource "aws_subnet" "main" {
   peer_owner_id = data.aws_caller_identity.current.account_id
   peer_vpc_id   = "vpc-00682b9d34c0f8605"
   vpc_id        = aws_vpc.main.id
+  auto_accept   = true
+
 }
 
 
