@@ -43,7 +43,7 @@ resource "aws_route" "default" {
 }
 
 resource "aws_route" "default-vpc" {
-  route_table_id            = dat.aws_vpc.default.main_route_tableid
+  route_table_id            = data.aws_vpc.default.main_route_tableid
   destination_cidr_block    = var.cidr_block
   vpc_peering_connection_id = aws_vpc_peering_connection.peer.id
 }
