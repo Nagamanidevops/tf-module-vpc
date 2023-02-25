@@ -86,3 +86,21 @@ resource "aws_route_table_association" "pub-routetble-assoc" {
   route_table_id = aws_route_table.public.id
 }
 
+resource "aws_eip" "ngw-eip" {
+  vpc      = true
+}
+
+resource "aws_nat_gateway" "ngw" {
+  allocation_id = aws_eip.ngw-eip.id
+  subnet_id     = aws_subnet.public.*.id[]0]
+
+   tags = merge(
+    local.common_tags,
+    { Name = "${var.env}-ngw" }
+  )
+
+  # To ensure proper ordering, it is recommended to add an explicit dependency
+  # on the Internet Gateway for the VPC.
+  #depends_on = [aws_internet_gateway.example]
+}
+
