@@ -20,4 +20,3 @@ resource "aws_vpc_peering_connection" "peer" {
 }
 
 
-resource
