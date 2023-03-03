@@ -4,3 +4,5 @@ variable "env"{}
 
 variable "default_vpc_id"{}
 
+variable "public_subnet_id" {}
+
