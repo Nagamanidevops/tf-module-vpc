@@ -16,4 +16,3 @@ output "public_subnet_ids" {
 #  //value = lookup(lookup(module.public_subnets, "public", null ),"subnet_ids",null)[0]
 # value = lookup(lookup(module.public_subnets, "public", null), "subnet_ids", null)[0]
 
-}
