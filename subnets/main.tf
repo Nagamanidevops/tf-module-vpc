@@ -35,4 +35,11 @@ count = length(aws_subnet.main)
   route_table_id = aws_route_table.route_table.id
 }
 
+resource "aws_route" "internet_gw_route" {
+  count                     = var.internet_gw == null ? 0 :1
+  route_table_id            = aws_route_table.route_table.id
+  destination_cidr_block    = "0.0.0.0/0"
+  gateway_id = var.internet_gw
+}
+
  

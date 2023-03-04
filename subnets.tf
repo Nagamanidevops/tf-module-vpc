@@ -8,9 +8,8 @@ module "subnets"{
     for_each                    = var.subnets
     cidr_block                  = each.value.cidr_block
     name                        = each.value.name
-    internet_gw = lookup(each.value, "internet_gw", false)
-    nat_gw = lookup(each.value, "nat_gw", false)
-    create_nat_gw = lookup(each.value, "create_nat_gw", false)
+    internet_gw                 =  each.value.internet_gw ? aws_internet_gateway.gw.id : null
+    # nat_gw = lookup(each.value, "nat_gw", false)
 
 
     
