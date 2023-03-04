@@ -34,3 +34,20 @@ resource "aws_internet_gateway" "gw" {
   )
 }
 
+resource "aws_eip" "ngw-eip" {
+  vpc      = true
+}
+
+# resource "aws_nat_gateway" "ngw" {
+#   allocation_id = aws_eip.ngw-eip.id
+#   subnet_id     = var.public_subnet_id[0]
+
+#   tags = merge(
+#     local.common_tags,
+#     { Name = "${var.env}-ngw" }
+#   )
+
+# }
+
+
+
