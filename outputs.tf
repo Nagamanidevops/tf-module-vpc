@@ -7,5 +7,5 @@ output "vpc_peering_connection_id"{
 }
 
 output "public_subnet__id" {
-    value = module.public_subnets.subnet_ids
+    value = module.public_subnets
 }
