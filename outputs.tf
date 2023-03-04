@@ -13,6 +13,6 @@ output "public_subnet_id" {
 output "one_subnet_id"{
 //value = module.public_subnets["public"]["subnet_ids"][0]
 
-value = lookup(module.public_subnets , "public" , {}, "subnet_ids",[])[0]
+value = lookup(module.public_subnets , "public", null ), "subnet_ids",null)[0]
 
 }
