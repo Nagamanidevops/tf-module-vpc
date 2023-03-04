@@ -23,7 +23,7 @@
 # }
      
      
-module "public_subnets"{
+module "public_subnets" {
     
      source                        = "./subnets"
   
