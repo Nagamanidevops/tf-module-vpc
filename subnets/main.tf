@@ -26,6 +26,13 @@ resource "aws_route_table" "route_table" {
 { Name = "${var.env}-${var.name}-route_table" }
    
   )
+  lifecycle {
+    ignore_changes = [
+    route,
+    ]
+     
+    
+  }
 }
 
 
